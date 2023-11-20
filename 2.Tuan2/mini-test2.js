@@ -28,59 +28,44 @@
 
 // Bài 3 Cho trước 1 mảng bao gồm n phần tử
 // Viết chương trình tính tổng các số nguyên tố trong mảng
-// let count =0;
-// let start = +prompt("moi ban nhap so bat dau");
-// let number = + prompt("moi ban nhap so luong phan tu");
-// let sumPrime=0
-// while (count<number){
-//     if (checkPrime(start)){
-//         sumPrime +=start;
-//         count++
-//     }
-//     start++;
-// }
-// document.write('tổng các nguyên tố là ' +sumPrime)
-// function checkPrime(n) {
-//     let isPrime = true;
-//     if (n<2){
-//         isPrime=false;
-//     }
-//     else {
-//         if (n>3){
-//             for (let i = 2; i < n; i++) {
-//                 if (n%i==0){
-//                     isPrime = false;
-//                     break;
+
+// let arr = [7,4,5,8,5,6,8,5,7,10]
+//     function prime(n) {
+//         if (n < 2) {
+//             return  false;
+//         } else if (n > 3) {
+//             for (let j = 2; j < n; j++) {
+//                 if (n % j == 0) {
+//                     return false;
 //                 }
 //             }
 //         }
+//             return true;
+//         }
+// let total = 0
+// for (let i = 0; i < arr.length; i++) {
+//     if (prime(arr[i])) {
+//     total += Number(arr[i])
 //     }
-//     return isPrime;
 // }
-// Bài 4 Viết chương trình tính tổng các số nguyên tố nhỏ hơn 500
-// let total =0;
-// if (checkPrime(n)){
-//      total+=n
-//     }
 // document.write(total)
-// function checkPrime(n) {
-//     let isPrime = true;
-//     if (n<2){
-//         isPrime=false;
-//     }
-//     else {
-//         if (n>3){
-//             for (let i = 2; i < n; i++) {
-//                 if (n%i==0 && n<500){
-//                     isPrime = false;
-//                     break;
-//                 }
-//             }
-//         }
-//     }
-//     return isPrime;
-// }
-var x = [1,3,5];
-var y = x[0]+x[1];
-x.push(y);
-console.log(x);
+// Bài 4 Viết chương trình tính tổng các số nguyên tố nhỏ hơn 500
+function prime(n) {
+    if (n < 2) {
+        return  false;
+    } else if (n > 3) {
+        for (let j = 2; j < n; j++) {
+            if (n % j == 0) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+let total = 0;
+for (let i = 0; i < 500; i++) {
+    if (prime(i)) {
+        total += i;
+    }
+}
+document.write(total)
