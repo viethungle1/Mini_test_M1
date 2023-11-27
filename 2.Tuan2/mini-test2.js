@@ -50,22 +50,30 @@
 // }
 // document.write(total)
 // Bài 4 Viết chương trình tính tổng các số nguyên tố nhỏ hơn 500
-function prime(n) {
-    if (n < 2) {
-        return  false;
-    } else if (n > 3) {
-        for (let j = 2; j < n; j++) {
-            if (n % j == 0) {
-                return false;
-            }
-        }
-    }
-    return true;
+// function prime(n) {
+//     if (n < 2) {
+//         return  false;
+//     } else if (n > 3) {
+//         for (let j = 2; j < n; j++) {
+//             if (n % j == 0) {
+//                 return false;
+//             }
+//         }
+//     }
+//     return true;
+// }
+// let total = 0;
+// for (let i = 0; i < 500; i++) {
+//     if (prime(i)) {
+//         total += i;
+//     }
+// }
+// document.write(total)
+function changeName(people){
+    people.name = "Hung";
+    console.log(people.name)//Hung
 }
-let total = 0;
-for (let i = 0; i < 500; i++) {
-    if (prime(i)) {
-        total += i;
-    }
-}
-document.write(total)
+
+const man = { name: "Thanh"}
+changeName(man);
+console.log(man.name)//Hung
